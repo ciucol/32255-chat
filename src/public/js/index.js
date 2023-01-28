@@ -52,3 +52,7 @@ socket.on("messageLogs", data => {
   })
   log.innerHTML = messages
 })
+
+socket.on("newClient", user => {
+  console.log(user)
+})

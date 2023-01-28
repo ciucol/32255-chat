@@ -7,6 +7,7 @@ const port = 3000
 
 const app = express()
 
+app.use(express.json())
 app.use(express.static(__dirname + '/public'))
 
 app.engine('handlebars', handlebars.engine())
@@ -37,3 +38,5 @@ io.on('connection', socket => {
   })
 })
 
+
+module.exports = io
